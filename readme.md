@@ -21,5 +21,5 @@ An example to render all the templates in `templates`, excluding those in
     ginger.render('templates', 'output', excluded_paths=(layout,),
         custom_filters={'markdown': lambda x: markdown.markdown(x)})
 
-[Python-Markdown]: 'http://www.freewisdom.org/projects/python-markdown/'
-[Jinja]: 'http://jinja.pocoo.org/'
+[Python-Markdown]: http://www.freewisdom.org/projects/python-markdown/
+[Jinja]: http://jinja.pocoo.org/

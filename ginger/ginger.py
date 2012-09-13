@@ -6,9 +6,6 @@ import os.path
 import jinja2
 
 def render(input_directory, output_directory, excluded_paths=tuple(), custom_filters=None):
-    '''Render all templates in input_directory to output_directory, excluding
-    those at any of the paths in excluded_paths, making available the filters
-    in custom_filters.'''
     if custom_filters is None:
         custom_filters = dict()
 
@@ -35,7 +32,6 @@ def render(input_directory, output_directory, excluded_paths=tuple(), custom_fil
                 _write(rendered_template, rendered_template_path)
 
 def _write(contents, path):
-    '''Write the passed file contents to the file at the passed path.'''
     directory = os.path.dirname(path)
 
     try:

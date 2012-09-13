@@ -5,8 +5,7 @@ import os.path
 
 import jinja2
 
-def render(input_directory, output_directory, excluded_paths=tuple(),
-    custom_filters=None):
+def render(input_directory, output_directory, excluded_paths=tuple(), custom_filters=None):
     '''Render all templates in input_directory to output_directory, excluding
     those at any of the paths in excluded_paths, making available the filters
     in custom_filters.'''
@@ -31,8 +30,7 @@ def render(input_directory, output_directory, excluded_paths=tuple(),
                 template = environment.get_template(template_path)
                 rendered_template = template.render()
 
-                rendered_template_path = os.path.join(output_directory,
-                    template_path)
+                rendered_template_path = os.path.join(output_directory, template_path)
                 
                 _write(rendered_template, rendered_template_path)
 
